@@ -222,5 +222,47 @@ fun main(){
     }
 
     println()
+
+    //nullable in kotlin
+    var name: String = "Aditya kumar" //non nullable string variable
+    //name = null -> compiler error
+    var nullableName :String? = "Aditya Kumar" //nullable String variable
+    //nullableName = null
+
+    //difference between nullable and non nullable string variable
+    var len = name.length
+    //var len2 = nullable.length -> compiler error
+    //so how can we fix this
+    var len2 = nullableName?.length
+    /*
+        var len2 = nullableName?.length //here this line of code is same as
+        if (nullableName != null) // this line of code
+        {
+           var len2 = nullableName.length
+        }
+        else
+        {
+            null
+        }
+     */
+    nullableName?.let {
+        //println(it.length)
+        //println(nullableName)
     }
+
+    //Elvis operator in Kotlin
+    /*
+       val name_1 = nullableName?:"Guest"
+       if nullableName = null then it gives name_1 = "Guest" which is a default value
+     */
+    val name_1 = nullableName?:"Guest"
+    println(name_1)
+
+    //Not null asertion operator !!
+    /*
+      It converts a nullable type variable to a num null type variable and throws a null pointer exception error if the nullable type holds a null value
+      This is risky and you should only use it when you are 100% sure that there will be some value
+     */
+    nullableName!!.toLowerCase()
+}
 
