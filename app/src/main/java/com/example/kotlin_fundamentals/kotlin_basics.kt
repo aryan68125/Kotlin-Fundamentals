@@ -117,4 +117,19 @@ fun main(){
         16,17 -> println("you may drive now")
         else -> println("you are too young")
     }
+
+    //while loop in kotlin
+    var x= 1
+    while (x<=10)
+    {
+        println("$x")
+        x++
+    }
+
+    var y = 100
+    while(y>0)
+    {
+        print("$y ")
+        y -= 2
+    }
 }
