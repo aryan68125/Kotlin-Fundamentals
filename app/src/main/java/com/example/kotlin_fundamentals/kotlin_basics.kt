@@ -125,11 +125,102 @@ fun main(){
         println("$x")
         x++
     }
-
+    //while loop example 2
     var y = 100
     while(y>0)
     {
         print("$y ")
         y -= 2
     }
-}
+    println()
+    //while loop example 3
+    var felttemp = "cold"
+    var roomtemp = 10
+    while(felttemp == "cold"){
+        roomtemp++
+        print("${roomtemp} degree celcius, ")
+        if(roomtemp>=20)
+        {
+            println()
+            felttemp = "comfy"
+            println("It's confy now")
+        }
+    }
+
+    //do while loop in kotlin
+    var z=1
+    do{
+        print ("$z ")
+      z++
+    }while(z<=10)
+    println()
+
+    //for loop in kotlin
+    println("executing for loop")
+    for(num in 1..10)
+    {
+        print("${num} ,")
+    }
+
+    println()
+    //another way of writing a for loop
+    println("another way of for loop")
+    for(i in 1 until 20)
+    {
+        print("${i}, ")
+    }
+
+    println()
+    //for loop in decreasing order
+    println("forloop in decreasing order")
+    for(i in 10 downTo 0)
+    {
+        print("${i} ,")
+    }
+
+    //for loop with decreasing order in steps of 2 LIKE:-> 10 8 6 4 2 ...
+    println()
+    println("For loop in decreasing order decreasing in steps of 2")
+    for(j in 20 downTo 0 step 2)
+    {
+        print("${j} ,")
+    }
+
+    //for loop in increasing order increasing in the steps of 2 LIKE:-> 2, 4, 6, 8, 10...
+    println()
+    println("For loop in ascending order in steps of 2")
+    for( k in 0 until 20 step 2)
+    {
+        print("${k}, ")
+    }
+
+    //break and continue statements in kotlin
+    println()
+    //break statement
+    println("break statements")
+    for(i in 1 until 20)
+    {
+        print("$i, ")
+        if(i/2 == 5){
+            println()
+            println("i value has reached $i i/2 = 5 hence the loop will break")
+            break
+        }
+    }
+
+    println()
+    //continue statement in kotlin
+    println("Continue statement in kotlin")
+    for(k in 1 until 20)
+    {
+        // 10/2 = 5 and 11/2 = 5.5 hence 10 and 11 are skipped when continue is used in the if statement
+        if(k/2 == 5)
+        {
+            continue
+        }
+        print("$k ,")
+    }
+
+    println()
+    }
+
