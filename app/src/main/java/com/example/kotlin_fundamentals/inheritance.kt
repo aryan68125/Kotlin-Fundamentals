@@ -98,6 +98,7 @@ fun main()
     myEcar.drive(128.5)
     myEcar.extendRange(250.36)
     myEcar.drive()
+    myEcar.brake()
     myEcar.chargertype = "type 3"
     println("charger type ${myEcar.chargertype}")
 }
