@@ -23,4 +23,14 @@ fun main()
     //you can also copy the contents of a class except the contents that you want to change in the object
     val Updated_User_Object = user1.copy(name = "Kendra Sunderland")
     println("id = ${Updated_User_Object.id} and name  = ${Updated_User_Object.name}")
+
+    //how to assign the variable in the data class to the \variables in the main function
+    /*
+       id_ = Updated_User_Object.id
+       name_ = Updated_User_Object.name
+       OR
+       val(id_,name_) = Updated_User_Object //lets try this one
+     */
+    val(id_,name_) = Updated_User_Object
+    println("printing the variable of Updated_User_Object by assigning it to the variables in the main function \n id = $id_ and name = $name_")
 }
