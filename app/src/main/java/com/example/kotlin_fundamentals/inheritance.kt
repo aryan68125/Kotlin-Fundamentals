@@ -108,6 +108,7 @@ interface
 interfaces can provide default implementation on all of its properties or functions
 But it doen't have to
 and if a property of a function has a default implementation the class that uses this interface may choose to override it
+An interface can inherit from another interface
  */
 interface drivable
 {
