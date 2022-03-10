@@ -62,4 +62,15 @@ fun main()
 
     elephant.run()
     elephant.breath()
+
+    /*
+    val mammal = Mammal("Aastha", "India", 45.5, 27.5)
+    It won't create an instance of an abstract class because Kotlin doesn't allow it
+    But you can create an instance of the classes that inherited from this abstract class
+
+    NOTE -> WHAT IS THE DIFFERENCE B/W AN ABSTRACT CLASS AND AN INTERFACE
+    -> AN INTERFACE ANNOT HOLD STATE AND WE CAN IMPLEMENT MULTIPLE INTERFACES BUT ONLY ONE CLASS
+    -> CLASSES HAVE CONSTRUCTORS EVEN AN ABSTRACT CLASS HAVE A CONSTRUCTOR BUT INTERFACE DOESN'T HAVE A CONSTRUCTOR
+    -> INTERFACES CANNOT HOLD FIELDS
+     */
 }
