@@ -29,6 +29,7 @@ class Person constructor(firstName : String = "default first name", lastName : S
     //Member Variable - Properties
     var age : Int? = null //age will be nullable
     var hobbie: String = "watch Amazon Prime"
+    var Name : String? = null
 
     //init is the initializer
     //initializer initializes the objects of this class Person
@@ -37,6 +38,7 @@ class Person constructor(firstName : String = "default first name", lastName : S
     {
         println("Person created" +
         "First name = ${firstName} and Last name = ${lastName}")
+        this.Name = firstName + " " + lastName
     }
 
     //create a constructor here
@@ -46,13 +48,14 @@ class Person constructor(firstName : String = "default first name", lastName : S
         //this.age means we are refering to the member variable of this class
         //age means the variable that is used to assign the age passed in the age from the class parameter to the member variable
         this.age = age
+
     }
 
     //member function -> Methods
     //Methods are the functions within a class
     fun stateHobby()
     {
-        println("My hobby is ${hobbie}")
-        println("My age is = ${age}")
+        println("${Name}'s hobby is ${hobbie}")
+        println("${Name}'s age is = ${age}")
     }
 }
