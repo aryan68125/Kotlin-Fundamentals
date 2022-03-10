@@ -43,7 +43,10 @@ NOTE:->
 //
 //}
 
-open class Car(var Name:String, var Brand:String)
+/*
+override maxspeed property of interface drivable
+ */
+open class Car(override var maxspeed : Double , var Name:String, var Brand:String) : drivable
 {
    open var range: Double = 0.0
     fun extendRange(amount: Double)
@@ -54,12 +57,18 @@ open class Car(var Name:String, var Brand:String)
             println("Extended range is now $range")
         }
     }
+
+    override fun drive() : String
+    {
+        return "Driving the interface drive"
+    }
+
    open fun drive(distance:Double){
         println("Drove for $distance KM")
     }
 }
 
-class Electric_Cars(Name: String, Brand: String, batteryLife : Double) : Car(Name, Brand)
+class Electric_Cars(maxspeed:Double , Name: String, Brand: String, batteryLife : Double) : Car(maxspeed , Name, Brand)
 {
     var chargertype = "type1"
    //override the range functionality
@@ -73,21 +82,45 @@ class Electric_Cars(Name: String, Brand: String, batteryLife : Double) : Car(Nam
    }
 
     //drive function created inside the sub class
-    fun drive(){
-        println("Drove for $range KM on electicity")
+    override fun drive() : String
+    {
+        return ("Drove for $range KM on electicity")
     }
 }
 //Any class inherits from Any class here Any is the name of the Class in Kotlin
 //every class that we create in Kotlin has Any as its Super class
 fun main()
 {
-    var mycar = Car("A3","Audi")
+    var mycar = Car(250.25,"A3","Audi")
     mycar.drive(200.2)
 
-    var myEcar = Electric_Cars("Model X", "Tesla",512.25)
+    var myEcar = Electric_Cars(320.6,"Model X", "Tesla",512.25)
     myEcar.drive(128.5)
     myEcar.extendRange(250.36)
     myEcar.drive()
     myEcar.chargertype = "type 3"
     println("charger type ${myEcar.chargertype}")
+}
+
+/*
+interface
+interfaces can provide default implementation on all of its properties or functions
+But it doen't have to
+and if a property of a function has a default implementation the class that uses this interface may choose to override it
+ */
+interface drivable
+{
+    //property of the interface
+    var maxspeed : Double
+
+    //functions of the interface
+    /*
+    fun drive():String doesn't have a function body so we need to implement this function of interface in the class Car
+    which extends to this interface
+     */
+    fun drive():String
+    fun brake()
+    {
+        println("The drivable is breaking")
+    }
 }
