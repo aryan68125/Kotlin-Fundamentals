@@ -53,4 +53,10 @@ fun main()
     days2[2] = "Aditya Kumar"
     println("After overriding an item at position 2 in the list named days2 -> $days2")
 
+    println()
+    //how to remove an item from a list
+    println("how to remove an item from a list")
+    days2.removeAt(2) //this will remove the item at index 2
+    println("Printing the elements in list named days2 after removing the item at index 2 -> $days2")
+
 }
