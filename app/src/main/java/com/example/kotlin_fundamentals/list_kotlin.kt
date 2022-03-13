@@ -47,4 +47,10 @@ fun main()
     days2.add(5,"Saturday")
     println("Printing days2 after adding -> $days2")
 
+    println()
+    //how to override an already present item in a list
+    println("how to override an already present item in a list")
+    days2[2] = "Aditya Kumar"
+    println("After overriding an item at position 2 in the list named days2 -> $days2")
+
 }
