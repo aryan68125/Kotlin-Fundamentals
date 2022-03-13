@@ -72,6 +72,13 @@ fun main()
     {
         println("${fruit.name}")
     }
+
+    println()
+    //arrays that can hold elements of multiple data types like a list would
+    println("Printing the array holding multiple data types")
+    val multiarray = arrayOf("sunday", 1, 2.568, 'a')
+    println(multiarray.contentToString())
+
 }
 
 data class Fruit(val name:String, val price:Double)
