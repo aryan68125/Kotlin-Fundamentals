@@ -36,4 +36,15 @@ fun main()
     println(additionalmonths)
     println("Printing months list")
     println(months)
+
+    println()
+    //creating a mutable list of a particular data type
+    println("creating a mutable list of a particular data type")
+    val days2 = mutableListOf<String>("Monday", "Tuesday","Wednesday")
+    println("Printing days2 list before adding -> $days2")
+    days2.add(3,"Thursday")
+    days2.add(4,"Friday")
+    days2.add(5,"Saturday")
+    println("Printing days2 after adding -> $days2")
+
 }
