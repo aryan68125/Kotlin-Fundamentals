@@ -26,7 +26,7 @@ fun main()
     println("Printing newFruits set which is mutable")
     println(newFruits)
 
-    //MAPS
+    //MAPS (IMMUTABLE)
     //Map is a type of collection that holds the data in form of key value pair just like a dictionary in python
     //NOTE : HERE WE ARE USING NUMBERS TO "STRINGS" BUT YOU CAN ALSO USE THIS MAP FOR NUMBERS TO "OBJECTS" SO YOU ARE NOT LIMITED HERE
     println()
@@ -42,4 +42,22 @@ fun main()
     {
         println("$key is to ${daysOfTheWeek[key]}")
     }
+
+    //creating a Map to store objects of the Fruits class
+    println()
+    println("creating a Map to store objects of the Fruits class")
+    val fruitsMap = mapOf(1 to Fruits("Grape", 2.5), 2 to Fruits("Mango",3.5), 3 to Fruits("Apple",4.256))
+    println(fruitsMap)
+
+    //creating a (mutable maps)
+    println()
+    println("Create a mutable map")
+    val newDaysOfWeek = daysOfTheWeek.toMutableMap()
+    newDaysOfWeek[4] = "Aastha Rajpurohit"
+    newDaysOfWeek[5] = "Aditya Kumar"
+    println(newDaysOfWeek)
+    //sort the Map
+    println("Printing the Map in a sorted manner ->")
+    println(newDaysOfWeek.toSortedMap())
 }
+data class Fruits(val name:String, val price:Double)
