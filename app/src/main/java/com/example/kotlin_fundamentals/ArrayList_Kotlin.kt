@@ -17,7 +17,7 @@ fun main()
        Functions of ArrayList
        open fun add(element:E):Boolean -> Used to add the specific element into the collection
        open fun clear() -> Used to remove all elements from the collection
-       open fun get(index:Int):E->Used to return the elements at specified index in the list
+       open fun get(index:Int):E -> Used to return the elements at specified index in the list
        open fun remove(element:E):Boolean -> Used to remove a single instance of the specific element
        from the collection, if it is available.
      */
